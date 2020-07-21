@@ -1,0 +1,30 @@
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1052px;
+  z-index: 10;
+}
+
+.cards-wrapper .pricing-card:not(:last-child) {
+  margin-bottom: 33px;
+}
+@media screen and (min-width: 1280px) {
+  .cards-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .cards-wrapper .pricing-card:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .cards-wrapper .pricing-card:nth-child(1) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .cards-wrapper .pricing-card:nth-child(3) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

@@ -1,0 +1,97 @@
+@import "./variables.css";
+
+.pricing-card {
+  display: flex;
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  width: 328px;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 35px 30px 31px;
+  text-align: center;
+  background-color: var(--light-gray-blue)
+}
+.pricing-card h1,
+h2,
+ul,
+button {
+  font-weight: 700;
+}
+
+.pricing-card h1,
+ul {
+  color: var(--gray-blue);
+}
+.pricing-card h2 {
+  color: var(--dark-gray-blue);
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+}
+.pricing-card h2::before {
+  content: "$";
+  font-size: 36px;
+  margin-right: 5px;
+}
+.pricing-card .dollarSymbol {
+  font-size: 14px;
+}
+.pricing-card li {
+  padding: 18px 0;
+  border-top: 1px solid var(--light-gray-blue-2);
+}
+.pricing-card li:last-child {
+  border-bottom: 1px solid var(--light-gray-blue-2);
+}
+.pricing-card button {
+  margin-top: 32px;
+  height: 45px;
+  font-size: 14px;
+  color: var(--light-gray-blue);
+  letter-spacing: 2px;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 7px;
+}
+.pricing-card button:active {
+  border: 1px solid #6d6fc2;
+  background-color: transparent;
+  background-image: none;
+  color: #6d6fc2;
+}
+
+/* Purple Card Styles  */
+.pricing-card.purple {
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.pricing-card.purple button:active {
+  background-color: transparent;
+  border: 1px solid var(--light-gray-blue);
+  color: var(--light-gray-blue);
+}
+.pricing-card.purple h1,
+.pricing-card.purple ul {
+  color: var(--light-gray-blue);
+}
+.pricing-card.purple h2 {
+  color: var(--light-gray-blue);
+}
+.pricing-card.purple button {
+  background-image: none;
+  background-color: var(--light-gray-blue);
+  color: #6d6fc2;
+}
+
+@media screen and (min-width: 1280px) {
+  .pricing-card {
+    width: 352px;
+  }
+  .pricing-card.purple {
+    padding: 58px 30px 55px;
+  }
+}
